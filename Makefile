@@ -4,7 +4,10 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = 
+SRCS = srcs/main.c srcs/utils.c srcs/operations/push.c \
+       srcs/operations/swap.c srcs/operations/rotate.c \
+       srcs/sort/small_sort.c
+
 OBJS = ${SRC:.c=.o}
 
 all: ${NAME}
