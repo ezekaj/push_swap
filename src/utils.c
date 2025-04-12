@@ -18,8 +18,13 @@ char	**parse_input(int ac, char **av)
 
 	if (ac == 1)
 		return (NULL);
-	input = ft_split(av[1], ' ');
-	if (!input)
-		return (NULL);
+	if (ac == 2)
+	{
+		input = ft_split(av[1], ' ');
+		if (!input)
+			return (NULL);
+	}
+	else
+		input = av + 1;
 	return (input);
 }
