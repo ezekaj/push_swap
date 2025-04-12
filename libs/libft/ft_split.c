@@ -6,7 +6,7 @@
 /*   By: ezekaj <ezekaj@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:56:23 by ezekaj            #+#    #+#             */
-/*   Updated: 2024/11/15 20:15:18 by ezekaj           ###   ########.fr       */
+/*   Updated: 2025/04/12 22:34:37 by ezekaj           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,17 +97,4 @@ char	**ft_split(const char *s, char c)
 	return (wordv);
 }
 
-int	main(void)
-{
-	char	**res;
-	int		i;
 
-	res = ft_split("   Elvi, Zekaj!  ", ' ');
-	i = 0;
-	while (*(res + i))
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-	return (0);
-}
