@@ -17,8 +17,14 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+// Stacks
 t_stack	*init_stack(void);
+
+// Input
 char	**parse_input(int ac, char **av);
+
+// Error handling
 void	error_exit(void);
+void	free_stack(t_stack *stack);
 
 # endif
