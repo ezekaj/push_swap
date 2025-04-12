@@ -26,5 +26,6 @@ char	**parse_input(int ac, char **av);
 // Error handling
 void	error_exit(void);
 void	free_stack(t_stack *stack);
+void	free_stacks_and_exit(t_stack *stack_a, t_stack *stack_b);
 
 # endif
