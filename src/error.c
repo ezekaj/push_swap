@@ -20,3 +20,10 @@ void	free_stack(t_stack *stack)
 	}
 	free(stack);
 }
+
+void	free_stacks_and_exit(t_stack *stack_a, t_stack *stack_b)
+{
+	free_stack(stack_a);
+	free_stack(stack_b);
+	error_exit();
+}
