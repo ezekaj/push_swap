@@ -19,5 +19,6 @@ typedef struct s_stack
 
 t_stack	*init_stack(void);
 char	**parse_input(int ac, char **av);
+void	error_exit(void);
 
 # endif
