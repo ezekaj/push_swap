@@ -16,4 +16,6 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+t_stack	*init_stack(void);
+
 # endif
