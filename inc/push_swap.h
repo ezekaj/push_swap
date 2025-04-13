@@ -31,6 +31,7 @@ void	free_stacks_and_exit(t_stack *stack_a, t_stack *stack_b);
 // Operations
 void	pa(t_stack *stack_a, t_stack *stack_b);
 void	pb(t_stack *stack_a, t_stack *stack_b);
+static void	swap(t_stack *stack);
 void	sa(t_stack *stack_b);
 void	sb(t_stack *stack_b);
 
