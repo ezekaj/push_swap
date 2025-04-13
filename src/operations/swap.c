@@ -1,27 +1,32 @@
 #include "../../inc/push_swap.h"
 
-void	sa(t_stack *stack_a)
+static void	swap(t_stack *stack)
 {
 	t_node	*temp;
 
-	if (stack_a == NULL || stack_a->top == NULL || stack_a->top->next == NULL)
+	if (stack == NULL || stack->top == NULL || stack->top->next == NULL)
 		return ;
-	temp = stack_a->top;
-	stack_a->top = stack_a->top->next;
-	temp->next = stack_a->top->next;
-	stack_a->top->next = temp;
+	temp = stack->top;
+	stack->top = stack->top->next;
+	temp->next = stack->top->next;
+	stack->top->next = temp;
+}
+
+void	sa(t_stack *stack_a)
+{
+	swap(stack_a);
 	ft_printf("sa\n");
 }
 
 void	sb(t_stack *stack_b)
 {
-	t_node	*temp;
-
-	if (stack_b == NULL || stack_b->top == NULL || stack_b->top->next == NULL)
-		return ;
-	temp = stack_b->top;
-	stack_b->top = stack_b->top->next;
-	temp->next = stack_b->top->next;
-	stack_b->top->next = temp;
+	swap(stack_b)
 	ft_printf("sb\n");
+}
+
+void ss(t_stack *stack_a, t_stack *stack_b)
+{
+	swap(stack_a);
+	swap(stack_b);
+	ft_printf("ss\n");
 }
