@@ -18,21 +18,21 @@ typedef struct s_stack
 }	t_stack;
 
 // Stacks
-t_stack	*init_stack(void);
+t_stack		*init_stack(void);
 
 // Input
-char	**parse_input(int ac, char **av);
+char		**parse_input(int ac, char **av);
 
 // Error handling
-void	error_exit(void);
-void	free_stack(t_stack *stack);
-void	free_stacks_and_exit(t_stack *stack_a, t_stack *stack_b);
+void		error_exit(void);
+void		free_stack(t_stack *stack);
+void		free_stacks_and_exit(t_stack *stack_a, t_stack *stack_b);
 
 // Operations
-void	pa(t_stack *stack_a, t_stack *stack_b);
-void	pb(t_stack *stack_a, t_stack *stack_b);
+void		pa(t_stack *stack_a, t_stack *stack_b);
+void		pb(t_stack *stack_a, t_stack *stack_b);
 static void	swap(t_stack *stack);
-void	sa(t_stack *stack_b);
-void	sb(t_stack *stack_b);
+void		sa(t_stack *stack_b);
+void		sb(t_stack *stack_b);
 
 # endif
