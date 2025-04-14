@@ -46,5 +46,6 @@ void		rrr(t_stack *stack_a, t_stack *stack_b);
 
 //Small Sort
 void	sort2(t_stack *stack_a);
+void	sort3(t_stack *stack_a);
 
 # endif
