@@ -2,14 +2,14 @@
 
 static void	swap(t_stack *stack)
 {
-	t_node	*temp;
+	t_node	*tmp;
 
 	if (stack == NULL || stack->top == NULL || stack->top->next == NULL)
 		return ;
-	temp = stack->top;
+	tmp = stack->top;
 	stack->top = stack->top->next;
-	temp->next = stack->top->next;
-	stack->top->next = temp;
+	tmp->next = stack->top->next;
+	stack->top->next = tmp;
 }
 
 void	sa(t_stack *stack_a)
