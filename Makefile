@@ -1,4 +1,5 @@
 NAME = push_swap.a
+EXEC = push_swap
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -16,7 +17,7 @@ SRC = src/main.c src/utils.c src/operations/push.c \
 
 OBJS = ${SRC:.c=.o}
 
-all: ${LIBFT} ${PRINTF} ${NAME}
+all: ${LIBFT} ${PRINTF} ${NAME} ${EXEC}
 
 ${LIBFT}:
 	make -C ${LIBFT_PATH}
@@ -26,7 +27,9 @@ ${PRINTF}:
 
 ${NAME}: ${OBJS}
 	ar rcs $(NAME) ${OBJS}
-	$(CC) $(CFLAGS) ${OBJS} ${LIBFT} ${PRINTF} -o push_swap
+
+${EXEC}: ${NAME}
+	$(CC) $(CFLAGS) -o ${EXEC} ${OBJS} ${LIBFT} ${PRINTF}
 
 clean:
 	make -C ${LIBFT_PATH} clean
@@ -37,7 +40,7 @@ fclean: clean
 	make -C ${LIBFT_PATH} fclean
 	make -C ${PRINTF_PATH} fclean
 	rm -f ${NAME}
-	rm -f push_swap
+	rm -f ${EXEC}
 
 re: fclean all
 
