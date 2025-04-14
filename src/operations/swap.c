@@ -1,6 +1,6 @@
 #include "../../inc/push_swap.h"
 
-static void	swap(t_stack *stack)
+void	swap(t_stack *stack)
 {
 	t_node	*tmp;
 
