@@ -34,5 +34,9 @@ void		pb(t_stack *stack_a, t_stack *stack_b);
 static void	swap(t_stack *stack);
 void		sa(t_stack *stack_b);
 void		sb(t_stack *stack_b);
+void		rotate(t_stack *stack);
+void		ra(t_stack *stack_a);
+void		rb(t_stack *stack_a);
+void		rr(t_stack *stack_a, t_stack *stack_b);
 
 # endif
