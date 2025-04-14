@@ -11,6 +11,7 @@ PRINTF = $(PRINTF_PATH)/libftprintf.a
 
 SRC = src/main.c src/utils.c src/operations/push.c \
 		src/operations/swap.c src/operations/rotate.c \
+		src/operations/rev_rotate.c \
 		src/sort/small_sort.c src/sort/big_sort.c src/error.c
 
 OBJS = ${SRC:.c=.o}
