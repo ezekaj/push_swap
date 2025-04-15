@@ -46,9 +46,11 @@ void		rrr(t_stack *stack_a, t_stack *stack_b);
 
 // Small Sort
 int			find_min_pos(t_stack *stack);
+int			find_max_pos(t_stack *stack);
 void		sort2(t_stack *stack_a);
 void		sort3(t_stack *stack_a);
 void		sort4(t_stack *stack_a, t_stack *stack_b);
 void		sort5(t_stack *stack_a, t_stack *stack_b);
+void		sort_big(t_stack *stack_a, t_stack *stack_b);
 
 # endif
