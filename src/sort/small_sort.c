@@ -78,3 +78,35 @@ void	sort4(t_stack *stack_a, t_stack *stack_b)
 	sort3(stack_a);
 	pa(stack_a, stack_b);
 }
+
+void	sort5(t_stack *stack_a, t_stack *stack_b)
+{
+	if (stack_a == NULL || stack_a->top == NULL || stack_a->top->next == NULL || stack_a->top->next->next == NULL || stack_a->top->next->next->next == NULL || stack_a->top->next->next->next->next == NULL)
+		return ;
+	if (find_min_pos(stack_a) == 1)
+	{
+		sa(stack_a);
+		pb(stack_a, stack_b);
+	}
+	else if (find_min_pos(stack_a) == 2)
+	{
+		ra(stack_a);
+		ra(stack_a);
+		pb(stack_a, stack_b);
+	}
+	else if (find_min_pos(stack_a) == 3)
+	{
+		rra(stack_a);
+		rra(stack_a);
+		pb(stack_a, stack_b);
+	}
+	else if (find_min_pos(stack_a) == 4)
+	{
+		rra(stack_a);
+		pb(stack_a, stack_b);
+	}
+	else if (find_min_pos(stack_a) == 0)
+		pb(stack_a, stack_b);
+	sort4(stack_a, stack_b);
+	pa(stack_a, stack_b);
+}
