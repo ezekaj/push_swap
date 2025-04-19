@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezekaj <ezekaj@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ezekaj <ezekaj@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:56:23 by ezekaj            #+#    #+#             */
-/*   Updated: 2025/04/12 22:34:37 by ezekaj           ###   ########.fr       */
+/*   Updated: 2025/04/19 12:14:03 by ezekaj           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,3 @@ char	**ft_split(const char *s, char c)
 	}
 	return (wordv);
 }
-
-

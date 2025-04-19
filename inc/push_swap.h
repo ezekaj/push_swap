@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ezekaj <ezekaj@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/19 12:14:13 by ezekaj            #+#    #+#             */
+/*   Updated: 2025/04/19 12:25:09 by ezekaj           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -53,4 +65,4 @@ void		sort4(t_stack *stack_a, t_stack *stack_b);
 void		sort5(t_stack *stack_a, t_stack *stack_b);
 void		sort_big(t_stack *stack_a, t_stack *stack_b);
 
-# endif
+#endif
