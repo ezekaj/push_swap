@@ -6,7 +6,7 @@
 /*   By: ezekaj <ezekaj@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 12:12:03 by ezekaj            #+#    #+#             */
-/*   Updated: 2025/04/19 12:24:42 by ezekaj           ###   ########.fr       */
+/*   Updated: 2025/04/19 12:27:22 by ezekaj           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,14 +104,24 @@ void	sort4(t_stack *stack_a, t_stack *stack_b)
 
 void	sort5(t_stack *stack_a, t_stack *stack_b)
 {
-	int	min_pos;
-
 	if (!stack_a || !stack_b || !stack_a->top || !stack_a->top->next
 		|| !stack_a->top->next->next || !stack_a->top->next->next->next
 		|| !stack_a->top->next->next->next->next)
 		return ;
-	min_pos = find_min_pos(stack_a);
-	handle_sort5_position(stack_a, min_pos);
+	if (find_min_pos(stack_a) == 1)
+		sa(stack_a);
+	else if (find_min_pos(stack_a) == 2)
+	{
+		ra(stack_a);
+		ra(stack_a);
+	}
+	else if (find_min_pos(stack_a) == 3)
+	{
+		rra(stack_a);
+		rra(stack_a);
+	}
+	else if (find_min_pos(stack_a) == 4)
+		rra(stack_a);
 	pb(stack_a, stack_b);
 	sort4(stack_a, stack_b);
 	pa(stack_a, stack_b);
