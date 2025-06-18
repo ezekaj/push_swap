@@ -76,5 +76,6 @@ void		sort_big(t_stack *stack_a, t_stack *stack_b);
 
 // Main functions
 void		choose_sort(t_stack *stack_a, t_stack *stack_b);
+void		free_input(char **input, int ac);
 
 #endif

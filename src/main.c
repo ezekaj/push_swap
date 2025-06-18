@@ -28,6 +28,22 @@ void	choose_sort(t_stack *stack_a, t_stack *stack_b)
 		sort_big(stack_a, stack_b);
 }
 
+void	free_input(char **input, int ac)
+{
+	int	i;
+
+	if (ac == 2)
+	{
+		i = 0;
+		while (input[i])
+		{
+			free(input[i]);
+			i++;
+		}
+		free(input);
+	}
+}
+
 int	main(int ac, char **av)
 {
 	char		**input;
@@ -48,11 +64,13 @@ int	main(int ac, char **av)
 		error_exit();
 	if (is_sorted(stack_a))
 	{
+		free_input(input, ac);
 		free_stack(stack_a);
 		free_stack(stack_b);
 		return (0);
 	}
 	choose_sort(stack_a, stack_b);
+	free_input(input, ac);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);
