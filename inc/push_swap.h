@@ -40,6 +40,7 @@ int			is_sorted(t_stack *stack);
 char		**parse_input(int ac, char **av);
 int			is_valid_number(const char *str);
 int			ft_atoi_safe(const char *str);
+int			validate_input(char **input);
 
 // Error handling
 void		error_exit(void);

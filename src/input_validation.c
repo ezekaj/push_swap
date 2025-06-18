@@ -59,3 +59,21 @@ int	ft_atoi_safe(const char *str)
 		error_exit();
 	return ((int)result);
 }
+
+int	validate_input(char **input)
+{
+	int	i;
+
+	if (!input)
+		return (0);
+	i = 0;
+	while (input[i])
+	{
+		if (!is_valid_number(input[i]))
+			return (0);
+		i++;
+	}
+	if (i == 0)
+		return (0);
+	return (1);
+}
