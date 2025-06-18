@@ -34,6 +34,7 @@ typedef struct s_stack
 // Stacks
 t_stack		*init_stack(void);
 void		push_node(t_stack *stack, int value);
+int			is_sorted(t_stack *stack);
 
 // Input
 char		**parse_input(int ac, char **av);

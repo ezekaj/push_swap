@@ -55,3 +55,19 @@ void	push_node(t_stack *stack, int value)
 	stack->top = new_node;
 	stack->size++;
 }
+
+int	is_sorted(t_stack *stack)
+{
+	t_node	*current;
+
+	if (!stack || !stack->top)
+		return (1);
+	current = stack->top;
+	while (current->next)
+	{
+		if (current->data > current->next->data)
+			return (0);
+		current = current->next;
+	}
+	return (1);
+}
