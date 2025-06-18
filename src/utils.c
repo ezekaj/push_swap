@@ -40,3 +40,18 @@ char	**parse_input(int ac, char **av)
 		input = av + 1;
 	return (input);
 }
+
+void	push_node(t_stack *stack, int value)
+{
+	t_node	*new_node;
+
+	if (!stack)
+		return ;
+	new_node = malloc(sizeof(t_node));
+	if (!new_node)
+		error_exit();
+	new_node->data = value;
+	new_node->next = stack->top;
+	stack->top = new_node;
+	stack->size++;
+}

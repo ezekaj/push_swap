@@ -33,6 +33,7 @@ typedef struct s_stack
 
 // Stacks
 t_stack		*init_stack(void);
+void		push_node(t_stack *stack, int value);
 
 // Input
 char		**parse_input(int ac, char **av);
