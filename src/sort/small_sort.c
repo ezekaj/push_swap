@@ -65,7 +65,10 @@ void	sort3(t_stack *stack_a)
 	else if (a > b && b < c && a > c)
 		ra(stack_a);
 	else if (a < b && b > c && a < c)
-		rra(stack_a);
+	{
+		sa(stack_a);
+		ra(stack_a);
+	}
 	else if (a < b && b > c && a > c)
 		rra(stack_a);
 	else if (a > b && b > c)
