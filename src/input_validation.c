@@ -94,3 +94,23 @@ void	populate_stack(t_stack *stack, char **input)
 		i--;
 	}
 }
+
+int	has_duplicates(t_stack *stack)
+{
+	t_node	*current;
+	t_node	*check;
+
+	current = stack->top;
+	while (current)
+	{
+		check = current->next;
+		while (check)
+		{
+			if (current->data == check->data)
+				return (1);
+			check = check->next;
+		}
+		current = current->next;
+	}
+	return (0);
+}

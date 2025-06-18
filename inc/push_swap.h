@@ -42,6 +42,7 @@ int			is_valid_number(const char *str);
 int			ft_atoi_safe(const char *str);
 int			validate_input(char **input);
 void		populate_stack(t_stack *stack, char **input);
+int			has_duplicates(t_stack *stack);
 
 // Error handling
 void		error_exit(void);
