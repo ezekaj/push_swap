@@ -10,8 +10,8 @@ PRINTF_PATH = libs/printf
 LIBFT = $(LIBFT_PATH)/libft.a
 PRINTF = $(PRINTF_PATH)/libftprintf.a
 
-SRC = src/main.c src/utils.c src/operations/push.c \
-		src/operations/swap.c src/operations/rotate.c \
+SRC = src/main.c src/utils.c src/input_validation.c \
+		src/operations/push.c src/operations/swap.c src/operations/rotate.c \
 		src/operations/rev_rotate.c \
 		src/sort/small_sort.c src/sort/big_sort.c src/error.c
 
