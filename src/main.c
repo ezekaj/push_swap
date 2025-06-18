@@ -12,6 +12,22 @@
 
 #include "../inc/push_swap.h"
 
+void	choose_sort(t_stack *stack_a, t_stack *stack_b)
+{
+	if (stack_a->size <= 1)
+		return ;
+	else if (stack_a->size == 2)
+		sort2(stack_a);
+	else if (stack_a->size == 3)
+		sort3(stack_a);
+	else if (stack_a->size == 4)
+		sort4(stack_a, stack_b);
+	else if (stack_a->size == 5)
+		sort5(stack_a, stack_b);
+	else
+		sort_big(stack_a, stack_b);
+}
+
 int	main(int ac, char **av)
 {
 	char		**input;
@@ -36,6 +52,7 @@ int	main(int ac, char **av)
 		free_stack(stack_b);
 		return (0);
 	}
+	choose_sort(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);

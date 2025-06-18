@@ -74,4 +74,7 @@ void		sort4(t_stack *stack_a, t_stack *stack_b);
 void		sort5(t_stack *stack_a, t_stack *stack_b);
 void		sort_big(t_stack *stack_a, t_stack *stack_b);
 
+// Main functions
+void		choose_sort(t_stack *stack_a, t_stack *stack_b);
+
 #endif
