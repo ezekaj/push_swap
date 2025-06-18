@@ -77,3 +77,20 @@ int	validate_input(char **input)
 		return (0);
 	return (1);
 }
+
+void	populate_stack(t_stack *stack, char **input)
+{
+	int	i;
+	int	value;
+
+	i = 0;
+	while (input[i])
+		i++;
+	i--;
+	while (i >= 0)
+	{
+		value = ft_atoi_safe(input[i]);
+		push_node(stack, value);
+		i--;
+	}
+}
