@@ -49,6 +49,33 @@ void	mm_values(t_stack *stack_a)
 
 void	sort_big(t_stack *stack_a, t_stack *stack_b)
 {
-	if (stack_a == NULL || stack_b == NULL)
+	int	chunk_size;
+	int	pushed;
+	int	total_size;
+
+	if (!stack_a || !stack_b || stack_a->size <= 5)
 		return ;
+	total_size = stack_a->size;
+	chunk_size = total_size / 5;
+	if (chunk_size < 15)
+		chunk_size = 15;
+	pushed = 0;
+	while (stack_a->size > 3 && pushed < total_size - 3)
+	{
+		if (stack_a->top->data <= (total_size / 2))
+		{
+			pb(stack_a, stack_b);
+			pushed++;
+		}
+		else
+			ra(stack_a);
+	}
+	sort3(stack_a);
+	while (stack_b->size > 0)
+	{
+		pushed = find_max_pos(stack_b);
+		while (pushed-- > 0)
+			rb(stack_b);
+		pa(stack_a, stack_b);
+	}
 }
