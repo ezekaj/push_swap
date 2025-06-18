@@ -38,6 +38,7 @@ int			is_sorted(t_stack *stack);
 
 // Input
 char		**parse_input(int ac, char **av);
+int			is_valid_number(const char *str);
 
 // Error handling
 void		error_exit(void);
